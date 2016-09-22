@@ -1,0 +1,11 @@
+# Configuration for writing / checking exercise solutions
+
+[solution.validate_data]
+skip_write=true
+
+[solution.calc_dvars]
+out_path = '{one_down}/scripts/calc_dvars.py'
+
+[[solution.calc_dvars.checks]]
+cwd = "{one_down}"
+command = ["{sys_exe}", "{in_path}", "tests/small_4d.nii"]
