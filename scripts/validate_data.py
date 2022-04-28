@@ -9,6 +9,7 @@ import os
 import sys
 import hashlib
 
+
 def file_hash(filename):
     """ Get byte contents of file `filename`, return SHA1 hash
 
