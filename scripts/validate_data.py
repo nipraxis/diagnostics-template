@@ -51,7 +51,7 @@ def validate_data(data_directory):
     # Calculate actual hash for given filename.
     # If hash for filename is not the same as the one in the file, raise
     # ValueError
-    raise RuntimeError("No code yet")
+    raise NotImplementedError('This is just a template -- you are expected to code this.')
 
 
 def main():
