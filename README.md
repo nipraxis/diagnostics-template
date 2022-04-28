@@ -17,7 +17,7 @@ cd data
 # 34937565 is for group 1
 # 34937586 is for group 2
 curl -L https://figshare.com/ndownloader/files/34937553 -o group_data.tar
-tar zxvf group_data.tar
+tar xvf group_data.tar
 cd ..
 ```
 
