@@ -25,7 +25,7 @@ def file_hash(filename):
     """
     # Open the file, read contents as bytes.
     # Calculate, return SHA1 has on the bytes from the file.
-    raise RuntimeError('No code yet')
+    raise NotImplementedError('This is just a template -- you are expected to code this.')
 
 
 def validate_data(data_directory):
