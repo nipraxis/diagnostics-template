@@ -29,12 +29,15 @@ def file_hash(filename):
 
 
 def validate_data(data_directory):
-    """ Read ``data_hashes.txt`` file in `data_directory`, check hashes
+    """ Read ``hash_list.txt`` file in ``data_directory``, check hashes
+    
+    An example file ``data_hashes.txt`` is found in the baseline version
+    of the repository template for your reference.
 
     Parameters
     ----------
     data_directory : str
-        Directory containing data and ``data_hashes.txt`` file.
+        Directory containing data and ``hash_list.txt`` file.
 
     Returns
     -------
@@ -44,9 +47,9 @@ def validate_data(data_directory):
     ------
     ValueError:
         If hash value for any file is different from hash value recorded in
-        ``data_hashes.txt`` file.
+        ``hash_list.txt`` file.
     """
-    # Read lines from ``data_hashes.txt`` file.
+    # Read lines from ``hash_list.txt`` file.
     # Split into SHA1 hash and filename
     # Calculate actual hash for given filename.
     # If hash for filename is not the same as the one in the file, raise
