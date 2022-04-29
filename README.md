@@ -8,6 +8,22 @@ You should put the code in this `findoutlie` directory on your Python PATH.
 
 This README file has instructions on how to get, validate and process the data.
 
+## Before you start
+### Create a repository from the template
+The first step is to click on the green button at the top-right that says *Use this template*.
+More detailed instructions can be found at [GitHub's documentation pages](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+
+Once you have your own repository under your username, please edit this `README.md` file and remove this section to avoid confusion.
+Again, [GitHub's documentation](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files) may help you conclude this step easily.
+That will be your first commit to this repository.
+
+### Locally clone the repository
+To work locally on your system, you can clone the repository.
+```
+git clone git@github.com:<your-username>/<name-you-gave-your-repo>
+cd <name-you-gave-your-repo>/
+```
+
 ## Get the data
 
 ```
