@@ -2,6 +2,7 @@
 """
 
 #+ Your imports here.
+import numpy as np
 
 
 def dvars(img):
@@ -28,4 +29,8 @@ def dvars(img):
     #
     # You may be be able to solve this in four lines, without a loop.
     # But solve it any way you can.
-    return [42]
+    # return [42]
+    n_trs = img.shape[-1]
+    data = img.get_fdata().reshape((-1, n_trs))
+    sq_diffs = np.diff(data, axis=1) ** 2
+    return np.sqrt(np.mean(sq_diffs, axis=0))
