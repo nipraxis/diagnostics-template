@@ -22,6 +22,11 @@ def file_hash(filename):
     hash : str
         SHA1 hexadecimal hash string for contents of `filename`.
     """
+    hash = hashlib.sha1()
+  
+    with open(filename, 'rb') as f:
+        contents = f.read()  
+    return hashlib.sha1(contents).hexdigest()
     # Open the file, read contents as bytes.
     # Calculate, return SHA1 has on the bytes from the file.
     # This is a placeholder, replace it to write your solution.
@@ -47,13 +52,22 @@ def validate_data(data_directory):
         If hash value for any file is different from hash value recorded in
         ``data_hashes.txt`` file.
     """
+    data_path = Path(data_directory) / "data_hashes.txt"
+    with open(data_path) as f:
+        lines = f.readlines()
+        for line in lines:
+            hash, file_path = line.split()
+            if hash != file_hash(data_path.parent / file_path):
+                raise ValueError(f"The file {file_path} is damaged")
+        f.close()
+            
     # Read lines from ``data_hashes.txt`` file.
     # Split into SHA1 hash and filename
     # Calculate actual hash for given filename.
     # If hash for filename is not the same as the one in the file, raise
     # ValueError
     # This is a placeholder, replace it to write your solution.
-    raise NotImplementedError('This is just a template -- you are expected to code this.')
+    # raise NotImplementedError('This is just a template -- you are expected to code this.')
 
 
 def main():
