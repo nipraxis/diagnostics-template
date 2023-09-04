@@ -1,12 +1,13 @@
 """
 This module defines functions implementing algorithms in SPM
 
-Here you want the get_spm_globals function from the earlier
-``four_dimensions_exercise``, with anything that function imports and other
-definitions that the function needs.
+Here you want the get_spm_globals function from the earlier ``four_dimensions``
+exercise, with anything that function imports and other definitions that the
+function needs.
 
 See:
-    https://bic-berkeley.github.io/psych-214-fall-2016/four_dimensions_exercise.html
+
+    https://github.com/nipraxis/four_dimensions
 
 In the same directory as this file, you will find a 'tests' directory.
 
