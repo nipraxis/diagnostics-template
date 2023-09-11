@@ -2,7 +2,11 @@
 """
 
 # Any imports you need
+# LAB(begin solution)
+import numpy as np
+# LAB(replace solution)
 # +++your code here+++
+# LAB(end solution)
 
 
 def dvars(img):
@@ -28,5 +32,12 @@ def dvars(img):
     #
     # You may be be able to solve this in four lines, without a loop.
     # But solve it any way you can.
+    # LAB(begin solution)
+    data = img.get_fdata()
+    vx_by_time = np.reshape(data, (-1, data.shape[-1]))
+    time_diffs = np.diff(vx_by_time, axis=1)
+    return np.sqrt(np.mean(time_diffs ** 2, axis=0))
+    # LAB(replace solution)
     # This is a placeholder, replace it to write your solution.
     raise NotImplementedError('Code up this function')
+    # LAB(end solution)
