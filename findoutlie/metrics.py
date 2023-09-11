@@ -34,7 +34,7 @@ def dvars(img):
     # But solve it any way you can.
     # LAB(begin solution)
     data = img.get_fdata()
-    vx_by_time = np.reshape(data, (-1, data.shape[-1]))
+    vx_by_time = np.reshape(data, (-1, data.shape[1]))
     time_diffs = np.diff(vx_by_time, axis=1)
     return np.sqrt(np.mean(time_diffs ** 2, axis=0))
     # LAB(replace solution)
