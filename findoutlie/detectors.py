@@ -11,7 +11,11 @@ requirements are met and raise an error otherwise.
 """
 
 # Any imports you need
+# LAB(begin solution)
+import numpy as np
+# LAB(replace solution)
 # +++your code here+++
+# LAB(end solution)
 
 
 def iqr_detector(measures, iqr_proportion=1.5):
@@ -46,8 +50,16 @@ def iqr_detector(measures, iqr_proportion=1.5):
         corresponding value in `measures` is an outlier.
     """
     # Any imports you need
+    # LAB(begin solution)
+    q1, q3 = np.percentile(measures, [25, 75])
+    iqr = q3 - q1
+    up_thresh = q3 + iqr * iqr_proportion
+    down_thresh = q1 - iqr * iqr_proportion
+    return np.logical_or(measures > up_thresh, measures < down_thresh)
+    # LAB(replace solution)
     # Hints:
     # * investigate np.percentile
     # * You'll likely need np.logical_or
     # https://textbook.nipraxis.org/numpy_logical.html
     # +++your code here+++
+    # LAB(end solution)
